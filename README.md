@@ -1,7 +1,8 @@
 # Summary
 
-## Video Demo
-![DEMO VIDEO](https://www.youtube.com/watch?v=Pa-fxlMGKT8)
+### Watch the Demo!
+[![Watch the video](https://img.youtube.com/vi/Pa-fxlMGKT8/hqdefault.jpg)](https://youtu.be/Pa-fxlMGKT8)
+
 
 ### Inspiration
 We recognize the challenges teams face when striving for improvement together.
