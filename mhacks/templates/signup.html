@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Website</title>
+        <link rel="stylesheet" href="../css/styles.css">
+    </head>
+    
+    <body>
+        <div class="logo-container">
+            <a href="/">
+                <img src="https://i.ibb.co/xCPq7zN/DALL-E-2024-09-28-15-58-05-A-dynamic-logo-for-a-basketball-application-that-analyzes-player-movement.webp"
+                    class="logo-icon">
+            </a>
+            <span class="logo-text">PROJECT NAME</span>
+        </div>
+            
+
+        <div class="top-right" style="margin-top: -5px; margin-right: 50px; font-size: 20px;">
+            <!-- explore -->
+            <a href="/accounts/login/">
+                <h3>login</h3>
+            </a>
+        </div>
+
+        <!-- DO NOT CHANGE THIS (aside from styling) -->
+
+        <form style="margin-top: 100px; margin-left: 30px;" action="/accounts/?target=/" method="post" enctype="multipart/form-data">
+            <label>Photo: </label>
+            <input type="file" name="file" required/><br><br>
+
+            <label>Full Name: </label>
+            <input type="text" name="fullname" required/><br><br>
+            
+            <label>Username: </label>
+            <input type="text" name="username" required/><br><br>
+
+            <label>Email: </label>
+            <input type="text" name="email" required/><br><br>
+
+            <label>Password: </label>
+            <input type="password" name="password" required/><br><br>
+
+            <input type="submit" name="signup" value="sign up"/><br><br><br>
+            <input type="hidden" name="operation" value="create"/>
+        </form>
+
+        <label style="margin-left: 30px;">Have an account? </label>
+        <a href="/accounts/login/" style="font-weight: 600;">login</a>  
+
+    </body>
+</html>

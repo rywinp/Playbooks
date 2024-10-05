@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>insta485</title>
+        <!-- static/ or /-->
+        <link rel="stylesheet" href="/css/style.cs">
+    </head>
+    
+    <body>
+        <!-- Top Left Container -->
+        <div class="top-left">
+            <!-- Instagram Logo -->
+                <div class="horizontal-box">
+                <a href="/">
+                    <img alt="Instagram logo" src="/static/images/instagram_logo.png" class="logo-size">
+                </a>
+                </div>
+
+            <div class="horizontal-box">
+                <h1> | </h1>
+            </div>
+
+            <div class="horizontal-box">
+                <h1>Insta485</h1>
+            </div>
+        </div>
+
+        <!-- Top Right Container -->
+        <div class="top-right" style="margin-top: -5px; margin-right: 50px; font-size: 25px;">
+            <!-- explore -->
+            <div class="horizontal-box">
+                <a href="/accounts/login/">
+                    <h3>login</h3>
+                </a>
+            </div>
+        </div>
+
+        <!-- DO NOT CHANGE THIS (aside from styling) -->
+
+        <form style="margin-top: 200px;" action="/accounts/?target=/" method="post" enctype="multipart/form-data">
+            <label>Photo: </label>
+            <input type="file" name="file" required/><br><br>
+
+            <label>Full Name: </label>
+            <input type="text" name="fullname" required/><br><br>
+            
+            <label>Username: </label>
+            <input type="text" name="username" required/><br><br>
+
+            <label>Email: </label>
+            <input type="text" name="email" required/><br><br>
+
+            <label>Password: </label>
+            <input type="password" name="password" required/><br><br>
+
+            <input type="submit" name="signup" value="sign up"/><br><br><br>
+            <input type="hidden" name="operation" value="create"/>
+        </form>
+
+        <label>Have an account? </label>
+        <a href="/accounts/login/" style="font-weight: 600;">login</a>
+
+    </body>
+</html>

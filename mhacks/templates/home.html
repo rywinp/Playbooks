@@ -1,0 +1,47 @@
+<!-- templates/home.html -->
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg">
+    <header class="text-center mb-8">
+        <h1 class="text-3xl font-bold text-gray-800">Welcome to Playbook</h1>
+        <p class="text-lg text-gray-600">Your ultimate tool for visualizing and analyzing 3D plays in a 2D plane!</p>
+    </header>
+
+    <section class="intro text-center mb-8">
+        <h2 class="text-2xl font-semibold text-gray-800">About the Project</h2>
+        <p class="mt-4 text-gray-600">
+            Playbook is designed for coaches and players who want to enhance their understanding of game plays.
+            With our innovative tool, you can easily upload clips from your favorite games and watch as plays unfold 
+            like never before—right on your digital whiteboard.
+        </p>
+    </section>
+
+    <section class="features mb-8">
+        <h2 class="text-2xl font-semibold text-gray-800">Key Features</h2>
+        <ul class="list-disc list-inside mt-4 text-gray-600">
+            <li><strong>Upload Clips:</strong> Seamlessly upload your game clips for analysis.</li>
+            <li><strong>Visualize Plays:</strong> Experience plays drawn out in real-time on a 2D plane.</li>
+            <li><strong>Pause & Annotate:</strong> Coaches can pause plays, make annotations, and highlight key moments.</li>
+            <li><strong>Download Annotations:</strong> Easily download your annotations as JPEG images for sharing or reference.</li>
+        </ul>
+    </section>
+
+    <section class="user-section text-center mb-8">
+        {% if user.is_authenticated %}
+            <h3 class="text-lg text-gray-800">Hello, {{ user.username }}!</h3>
+        {% else %}
+            <p class="text-gray-600">You are not logged in. Join our community to start analyzing plays!</p>
+            <a href="{% url 'login' %}" class="mt-4 inline-block bg-blue-500 text-white font-semibold py-2 px-4 rounded">Log In</a>
+        {% endif %}
+    </section>
+
+    <footer class="text-center mt-8">
+        <p class="text-gray-600">© 2024 Playbook. All rights reserved.</p>
+        <!-- <a href="" class="text-blue-500 hover:underline">Learn More About Us</a> -->
+    </footer>
+</div>
+
+{% endblock %}

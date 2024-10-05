@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+<div class="max-w-lg mx-auto mt-10 p-6 bg-white shadow-md rounded-lg">
+  <h2 class="text-2xl font-semibold mb-6">Log In</h2>
+  
+  <form method="post" class="space-y-6">
+    {% csrf_token %}
+    
+    <!-- Username field -->
+    <div>
+      <label for="id_username" class="block text-sm font-medium text-gray-700">
+        {{ form.username.label }}
+      </label>
+      {{ form.username }}
+      {% if form.username.errors %}
+        <p class="text-red-500 text-sm">
+          {% for error in form.username.errors %}
+            {{ error }}<br>
+          {% endfor %}
+        </p>
+      {% endif %}
+    </div>
+
+    <!-- Password field -->
+    <div>
+      <label for="id_password" class="block text-sm font-medium text-gray-700">
+        {{ form.password.label }}
+      </label>
+      {{ form.password }}
+      {% if form.password.errors %}
+        <p class="text-red-500 text-sm">
+          {% for error in form.password.errors %}
+            {{ error }}<br>
+          {% endfor %}
+        </p>
+      {% endif %}
+    </div>
+
+    <!-- Submit button -->
+    <div>
+      <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Log In
+      </button>
+    </div>
+    
+  </form>
+  <!-- Sign Up Option -->
+  <div class="mt-4 text-center">
+    <p class="text-gray-700">
+      Don't have an account? 
+      <a href="{% url 'signup' %}" class="text-blue-500 hover:underline">Sign Up</a>
+    </p>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+<!-- templates/upload_video.html -->
+{% extends "base.html" %}
+
+{% block title %}Upload Videos{% endblock %}
+
+{% block content %}
+<div class="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-lg mt-10">
+    <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">Video Uploader</h1>
+    <form enctype="multipart/form-data" method="POST" action="{% url 'view_videos' %}" class="space-y-4">
+        {% csrf_token %}
+        <div>
+            {{ form.as_p }}
+        </div>
+        <div class="text-center">
+            <input type="submit" value="Upload"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded cursor-pointer" />
+        </div>
+    </form>
+
+    <!-- Optional Video Preview Section -->
+    <!-- Uncomment this section if you want to display the uploaded video after uploading -->
+    <!-- <div class="mt-8 text-center">
+        <h2 class="text-xl font-semibold text-gray-800">Preview Video</h2>
+        <video width='400' controls class="mx-auto mt-4">
+            <source src='{{ MEDIA_URL }}{{ videofile }}' type='video/mp4'>
+            Your browser does not support the video tag.
+        </video>
+    </div> -->
+</div>
+{% endblock %}

@@ -1,0 +1,14 @@
+# Ignore virtual environment directory
+venv/
+env/
+.env
+
+# Ignore Python cache directories
+*__pycache__/
+*.pyc
+
+# Ignore Mac System Files
+.DS_Store
+
+# Ignore database
+mhacks/db.sqlite3

@@ -1,0 +1,16 @@
+# Django dependencies
+Django==5.1.1
+
+# Proceesing Dependencies
+inference==0.21.0
+supervision==0.22.0
+numpy>=1.26.4
+inference-sdk==0.21.0
+roboflow==1.1.45
+ultralytics==8.2.103
+transformers==4.45.1
+more-itertools==10.5.0
+umap==0.1.1
+umap-learn==0.5.6
+scikit-learn==1.5.2
+sentencepiece==0.2.0
