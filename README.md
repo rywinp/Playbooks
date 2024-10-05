@@ -1,4 +1,8 @@
 # Summary
+
+## Video Demo
+![DEMO VIDEO](https://www.youtube.com/watch?v=Pa-fxlMGKT8)
+
 ### Inspiration
 We recognize the challenges teams face when striving for improvement together.
 Analyzing footage recorded individually can often feel daunting, which is why 
